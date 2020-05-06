@@ -45,6 +45,10 @@ public class Data extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         txtCombo = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TabMahasiswa = new javax.swing.JTable();
+        btnDelete = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
         back = new javax.swing.JLabel();
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,6 +172,37 @@ public class Data extends javax.swing.JFrame {
         });
         jPanel1.add(txtCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 200, -1));
 
+        TabMahasiswa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(TabMahasiswa);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 640, 140));
+
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
+
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/green.jpg"))); // NOI18N
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -211,6 +246,15 @@ public class Data extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                        
 
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                          
+
+        // TODO add your handling code here:
+    }                                         
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    }                                       
+
     /**
      * @param args the command line arguments
      */
@@ -247,7 +291,10 @@ public class Data extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
+    private javax.swing.JTable TabMahasiswa;
     private javax.swing.JLabel back;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -259,6 +306,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rb1;
     private javax.swing.JRadioButton rb2;
     private javax.swing.JComboBox<String> txtCombo;
