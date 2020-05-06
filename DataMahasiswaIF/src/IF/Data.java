@@ -49,6 +49,7 @@ public class Data extends javax.swing.JFrame {
         TabMahasiswa = new javax.swing.JTable();
         btnDelete = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
+        btnEdit = new javax.swing.JButton();
         back = new javax.swing.JLabel();
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -203,6 +204,14 @@ public class Data extends javax.swing.JFrame {
         });
         jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
+        btnEdit.setText("Edit");
+        btnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/green.jpg"))); // NOI18N
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -255,6 +264,10 @@ public class Data extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                       
 
+    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    }                                       
+
     /**
      * @param args the command line arguments
      */
@@ -294,6 +307,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JTable TabMahasiswa;
     private javax.swing.JLabel back;
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
