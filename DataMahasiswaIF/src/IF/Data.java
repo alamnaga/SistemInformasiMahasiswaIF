@@ -49,7 +49,9 @@ public class Data extends javax.swing.JFrame {
         TabMahasiswa = new javax.swing.JTable();
         btnDelete = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
         back = new javax.swing.JLabel();
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,7 +196,7 @@ public class Data extends javax.swing.JFrame {
                 btnDeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, -1, -1));
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -204,13 +206,19 @@ public class Data extends javax.swing.JFrame {
         });
         jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
+        btnCancel.setText("Cancel");
+        jPanel1.add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, -1, -1));
+
         btnEdit.setText("Edit");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
+
+        btnExit.setText("Exit");
+        jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
 
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/green.jpg"))); // NOI18N
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -306,8 +314,10 @@ public class Data extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JTable TabMahasiswa;
     private javax.swing.JLabel back;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnEdit;
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
