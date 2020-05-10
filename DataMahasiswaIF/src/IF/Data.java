@@ -52,6 +52,9 @@ public class Data extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
+        txtCari = new javax.swing.JTextField();
+        btnSearch = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         back = new javax.swing.JLabel();
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -220,6 +223,26 @@ public class Data extends javax.swing.JFrame {
         btnExit.setText("Exit");
         jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
 
+        txtCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCariActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 260, -1));
+
+        btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, 20));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setText("*Cari berdasarkan nim atau nama");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, 10));
+
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/green.jpg"))); // NOI18N
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -270,11 +293,20 @@ public class Data extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
+        
     }                                       
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
     }                                       
+
+    private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    }                                       
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
 
     /**
      * @param args the command line arguments
@@ -319,7 +351,9 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -333,6 +367,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rb1;
     private javax.swing.JRadioButton rb2;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JComboBox<String> txtCombo;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNama;
