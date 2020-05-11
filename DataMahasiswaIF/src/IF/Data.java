@@ -5,8 +5,10 @@
  */
 package IF;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -341,6 +343,29 @@ public class Data extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
+        String jenis_kelamin = null;
+        if (rb1.isSelected()){
+            jenis_kelamin = "Laki-laki";
+        }else if(rb2.isSelected()){
+            jenis_kelamin = "Perempuan";
+        }
+        try{
+            String sql = "INSERT INTO mahasiswaif VALUES ('" + txtNim.getText()
+                    + "','" + txtNama.getText()
+                    + "','" + txtTelepon.getText()
+                    + "','" + jenis_kelamin
+                    + "','" + txtEmail.getText()
+                    + "','" + txtCombo.getSelectedItem() + "')";
+            java.sql.Connection conn = (Connection) Koneksi.configDB();
+            java.sql.PreparedStatement pstm = conn.prepareStatement (sql);
+            pstm.execute();
+            JOptionPane.showMessageDialog(null, "Proses simpan berhasil");
+            Tampilkan_Data();
+            Kosongkan_Form();
+                    
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
         
     }                                       
 
