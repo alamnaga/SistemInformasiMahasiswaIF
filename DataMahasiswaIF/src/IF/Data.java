@@ -14,8 +14,17 @@ public class Data extends javax.swing.JFrame {
     /**
      * Creates new form Data
      */
+    private void Kosongkan_Form(){
+        txtNim.setEditable(true);
+        txtNama.setText(null);
+        txtTelepon.setText(null);
+        txtButton.clearSelection();
+        txtEmail.setText(null);
+        txtCombo.setSelectedIndex(0);
+    }
     public Data() {
         initComponents();
+        Kosongkan_Form();
     }
 
     /**
@@ -27,7 +36,7 @@ public class Data extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jLabel6 = new javax.swing.JLabel();
+        txtButton = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -56,9 +65,6 @@ public class Data extends javax.swing.JFrame {
         btnSearch = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         back = new javax.swing.JLabel();
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Telepon");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,6 +152,7 @@ public class Data extends javax.swing.JFrame {
         jLabel8.setText("Jenis Kelamin");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, 20));
 
+        txtButton.add(rb1);
         rb1.setForeground(new java.awt.Color(255, 255, 255));
         rb1.setText("Laki-laki");
         rb1.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +162,7 @@ public class Data extends javax.swing.JFrame {
         });
         jPanel1.add(rb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
 
+        txtButton.add(rb2);
         rb2.setForeground(new java.awt.Color(255, 255, 255));
         rb2.setText("Perempuan");
         jPanel1.add(rb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, -1, -1));
@@ -358,7 +366,6 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -367,6 +374,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rb1;
     private javax.swing.JRadioButton rb2;
+    private javax.swing.ButtonGroup txtButton;
     private javax.swing.JTextField txtCari;
     private javax.swing.JComboBox<String> txtCombo;
     private javax.swing.JTextField txtEmail;
