@@ -371,6 +371,24 @@ public class Data extends javax.swing.JFrame {
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
+         try{
+            String sql = "UPDATE mahasiswaif SET nim ='" + txtNim.getText()
+                    + "', nama='" + txtNama.getText()
+                    + "', telepon='" + txtTelepon.getText()
+                    + "', email='" + txtEmail.getText()
+                    + "', semester='" + txtCombo.getSelectedItem()
+                    + "' WHERE nim = '" + txtNim.getText()+ "'";
+            java.sql.Connection conn = (Connection) Koneksi.configDB();
+            java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.execute();
+            JOptionPane.showMessageDialog(null, "Edit berhasil");
+            
+                    
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        Tampilkan_Data();
+        Kosongkan_Form();
     }                                       
 
     private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {                                        
