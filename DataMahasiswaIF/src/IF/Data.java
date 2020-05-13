@@ -337,8 +337,21 @@ public class Data extends javax.swing.JFrame {
     }                                        
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                          
-
         // TODO add your handling code here:
+        try{
+            String sql = "DELETE FROM mahasiswaif WHERE nim ='" + txtNim.getText() + "'";
+                  
+            java.sql.Connection conn = (Connection) Koneksi.configDB();
+            java.sql.PreparedStatement pstm = conn.prepareStatement (sql);
+            pstm.execute();
+            JOptionPane.showMessageDialog(null, "Hapus data berhasil");
+            
+                    
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        Tampilkan_Data();
+        Kosongkan_Form();
     }                                         
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
