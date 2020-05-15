@@ -276,6 +276,11 @@ public class Data extends javax.swing.JFrame {
         jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
 
         txtCari.addActionListener(new java.awt.event.ActionListener() {
@@ -421,6 +426,11 @@ public class Data extends javax.swing.JFrame {
         // TODO add your handling code here:
         Kosongkan_Form();
     }                                         
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+         System.exit(0);
+    }                                       
 
     /**
      * @param args the command line arguments
