@@ -260,6 +260,11 @@ public class Data extends javax.swing.JFrame {
         jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, -1, -1));
 
         btnEdit.setText("Edit");
@@ -410,6 +415,11 @@ public class Data extends javax.swing.JFrame {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
+    }                                         
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        Kosongkan_Form();
     }                                         
 
     /**
